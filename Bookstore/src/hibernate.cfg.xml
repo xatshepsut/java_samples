@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.password">root</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.default_schema">bookstore</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        
+        <!-- JDBC connection pool (use the built-in) -->
+        <property name="connection.pool_size">1</property>
+
+        <!-- Disable the second-level cache  -->
+        <property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+
+        <!-- Drop and re-create the database schema on startup -->
+        <property name="hbm2ddl.auto">create</property>
+        
+        <mapping class="org.aua.hibernate.entity.Author"/>
+        <mapping class="org.aua.hibernate.entity.Book"/>
+		<mapping class="org.aua.hibernate.entity.Category"/>
+        <mapping class="org.aua.hibernate.entity.Contact"/>
+        <mapping class="org.aua.hibernate.entity.Customer"/>
+        <mapping class="org.aua.hibernate.entity.Discount"/>
+        <mapping class="org.aua.hibernate.entity.Employee"/>
+        <mapping class="org.aua.hibernate.entity.InStock"/>
+        <mapping class="org.aua.hibernate.entity.Sale"/>
+        <mapping class="org.aua.hibernate.entity.Store"/>
+
+    </session-factory>
+</hibernate-configuration>

@@ -1,0 +1,45 @@
+#JSGF V1.0;
+
+/**
+ * JSGF Grammar for Notes project speech commands
+ *
+ * @author Aidela Karamyan
+ * @version 1.0.0
+ */
+
+grammar commands;
+
+/* Actions */
+<viewAction> = (open | view) {view} ;
+<removeAction> = (delete | remove) {remove} ;
+public <editAction> = (edit | modify | change) {edit} ; 
+<addAction> = (add | make [new]) ;
+<selectAction> = select ;
+<saveAction> = save ;
+
+
+/* Numbers */
+<zero> = zero;
+<ones> = one | two | three | four | five | six | seven | eight | nine ;
+<tens> = eleven | twelve | thirteen | fourteen | fifteen | sixteen | seventeen | eighteen | nineteen ;
+<decimal> = twenty | thirty | forty | fifty | sixty | seventy | eighty | ninety ;
+<tensWithOnes> = <decimal> [<ones>] ;
+
+/*public <number> = <ones> | <tens> | <decimal> | <tensWithOnes> | <zero> ; */
+public <number> = <ones> | <zero> | ten ;
+
+
+/* Main view commands */
+public <listCommand> = (<viewAction> | <removeAction> | <editAction> ) [selection | selected | selected [note]] ;
+public <selectCommand> = <selectAction> (note | row) at index <number> ;
+
+/* Note view commands */
+<editCommand> = switch to edit mode | <editAction> ;
+
+
+
+public <hello> = hello world ;
+public <unknown> = unknown | <NULL> ;
+public <cancel> = cancel ;
+
+

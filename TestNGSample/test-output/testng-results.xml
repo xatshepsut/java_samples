@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite_1" duration-ms="89" started-at="2015-04-14T14:59:25Z" finished-at="2015-04-14T14:59:25Z">
+    <groups>
+    </groups>
+    <test name="Test_1" duration-ms="23" started-at="2015-04-14T14:59:25Z" finished-at="2015-04-14T14:59:25Z">
+      <class name="com.samples.testng.test.TestSampleClass">
+        <test-method status="PASS" signature="test()[pri:0, instance:com.samples.testng.test.TestSampleClass@6ea6d14e]" name="test" duration-ms="11" started-at="2015-04-14T18:59:25Z" finished-at="2015-04-14T18:59:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+      </class> <!-- com.samples.testng.test.TestSampleClass -->
+    </test> <!-- Test_1 -->
+    <test name="Test_2" duration-ms="2" started-at="2015-04-14T14:59:25Z" finished-at="2015-04-14T14:59:25Z">
+      <class name="com.samples.testng.test.TestSampleClass_2">
+        <test-method status="PASS" signature="test()[pri:0, instance:com.samples.testng.test.TestSampleClass_2@1d251891]" name="test" duration-ms="0" started-at="2015-04-14T18:59:25Z" finished-at="2015-04-14T18:59:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+      </class> <!-- com.samples.testng.test.TestSampleClass_2 -->
+    </test> <!-- Test_2 -->
+  </suite> <!-- Suite_1 -->
+</testng-results>
